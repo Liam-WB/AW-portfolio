@@ -1,5 +1,6 @@
 import { useState, useEffect  } from 'react';
 import { Navbar, Nav, Container } from 'react-bootstrap';
+import logo from '../assets/img/AW logo.png'
 
 function NavBar() {
 
@@ -29,7 +30,7 @@ function NavBar() {
       <Navbar expand="md" className={scrolled ? "scrolled" : ""}>
         <Container>
           <Navbar.Brand href="/">
-            <img src="#" alt="Logo" />
+            <img src={logo} alt="Logo" />
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav">
             <span className="navbar-toggler-icon"></span>
@@ -42,7 +43,6 @@ function NavBar() {
             </Nav>
             <span className="navbar-text">
               <div className="social-icon">
-                <a href="#"><img src="#" alt="" /></a>
               </div>
             </span>
           </Navbar.Collapse>
