@@ -2,7 +2,7 @@ import { useState, useEffect  } from 'react';
 import { Navbar, Nav, Container } from 'react-bootstrap';
 import logo from '../assets/img/AW logo.png'
 
-function NavBar() {
+export const NavBar = () => {
 
   const [activeLink, setActiveLink] = useState('home');
   const [scrolled, setScrolled] = useState(false);
@@ -38,12 +38,17 @@ function NavBar() {
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto">
               <Nav.Link href="#home" className={activeLink === 'home' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('home')}>Home</Nav.Link>
-              <Nav.Link href="#skills" className={activeLink === 'skills' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('skills')}>Skills</Nav.Link>
               <Nav.Link href="#projects" className={activeLink === 'projects' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('projects')}>Projects</Nav.Link>
+              <Nav.Link href="#gallery" className={activeLink === 'gallery' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('gallery')}>Gallery</Nav.Link>
+              <Nav.Link href="#contact" className={activeLink === 'contact' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('contact')}>Contact</Nav.Link>
             </Nav>
             <span className="navbar-text">
               <div className="social-icon">
+                <a href="#"><img src={''} alt=""/></a>
+                <a href="#"><img src={''} alt=""/></a>
+                <a href="#"><img src={''} alt=""/></a>
               </div>
+              <button className='vvd' onClick={() => console.log('connect)')}><span>Let's Connect</span></button>
             </span>
           </Navbar.Collapse>
         </Container>
@@ -51,5 +56,3 @@ function NavBar() {
 
   );
 }
-
-export default NavBar;
